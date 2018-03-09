@@ -1,0 +1,6 @@
+<h1>Hello {{classe}}</h1>
+<button (click)="onClick()">Afficher Etudiants </button>
+    <ul *ngIf="etat">
+    <li *ngFor="let e of etudiants">{{e}}</li>
+    </ul>
+    <input type="text" (keyup.enter)="ajouterEtudiant(nom)" #nom>
