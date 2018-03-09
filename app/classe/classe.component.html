@@ -1,5 +1,6 @@
 <h1>Hello {{classe}}</h1>
-<button (click)="onClick()">Afficher Etudiants </button>
+<input type="text" [value]="classe" [(ng-model)]="classe"> <!--property binding one why , 2 why [(ng-model)] --> 
+<button (click)="onClick()">{{etat?"Masquer etudiant": "Afficher Etudiants"}} </button>
     <ul *ngIf="etat">
     <li *ngFor="let e of etudiants">{{e}}</li>
     </ul>
